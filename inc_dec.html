@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Count(+/-)</title>
+    <style>
+        body{
+    background-color:antiquewhite;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+#np{
+    background-color: rgb(243, 239, 5);
+    height: 50px;
+    width: 500px;
+    padding: 8px;
+    border: 2px solid black;
+}
+#mn{
+    text-align: center;
+    height: 400px;
+    width: 500px;
+    border-radius: 5px;
+    background-color: rgb(5, 197, 197);
+    box-shadow: 3px 3px 8px 8px rgb(172, 163, 163);
+}
+#cnt{
+    
+    margin-left: 150px;
+    background-color: aliceblue;
+    margin-right: 150px;
+    text-align: center;
+    height: 40px;
+
+    padding: 10px;
+    border-radius: 50%;
+    border:4px solid black;
+}
+p{
+    margin: 80px 65px 80px 65px;
+}
+button{
+    height: 60px;
+    width: 120px;
+    border-radius: 7px;
+    text-align: center;
+}
+#inc{
+    background-color: rgb(75, 226, 4);
+    border-radius: 50px;
+}
+#dec{
+    background-color: rgb(248, 245, 47);
+    border-radius: 50px;
+}
+#reset{
+    background-color: rgb(247, 34, 45);
+    border-radius: 50px;
+}
+    </style>
+</head>
+<body>
+    <div id="mn"> 
+   <h1 id="cnt" >0</h1>
+   <p>
+   <button id="inc"><b>INCREMENT(+)</b></button>
+   <button id="dec"><b>DECREMENT(-)</b></button>
+   <button id="reset"><b>RESET(.)</b></button>
+   </p>
+   </div>
+   <script>
+let Count=0;
+let display=document.getElementById("cnt");
+let incBtn=document.getElementById("inc");
+let decBtn=document.getElementById("dec");
+let resetBtn=document.getElementById("reset");
+incBtn.addEventListener("click", function(){
+    Count++;
+    display.textContent=""+Count;
+})
+decBtn.addEventListener("click", function(){
+    Count--;
+    display.textContent=""+Count;
+})
+resetBtn.addEventListener("click", function(){
+    Count=0;
+    display.textContent=""+Count;
+})
+   </script>
+</body>
+</html>
